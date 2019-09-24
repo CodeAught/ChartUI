@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatTableModule} from '@angular/material/table';
 import {MatCardModule} from '@angular/material/card';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import {MatCardModule} from '@angular/material/card';
     HttpClientModule,
     MatGridListModule,
     MatTableModule,
-    MatCardModule
+    MatCardModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

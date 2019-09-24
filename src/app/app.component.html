@@ -1,26 +1,18 @@
-<mat-grid-list cols="2" rowHeight="250px">
-  <mat-grid-tile
-      [colspan]="1"
-      [rowspan]="2"
-      [style.background]="'#e4e4e4'">
-    <div><app-pie-chart [geoLocation]="geoLocation"></app-pie-chart></div>
-  </mat-grid-tile>
-  <mat-grid-tile
-      [colspan]="1"
-      [rowspan]="1"
-      [style.background]="'#e4e4e4'">
-    <div><app-percentage-box [percent]="percent"></app-percentage-box></div>
-  </mat-grid-tile>
-  <mat-grid-tile
-      [colspan]="1"
-      [rowspan]="1"
-      [style.background]="'#e4e4e4'">
-    <div><app-user-info [userInfo]="users ? users[0] : null"></app-user-info></div>
-  </mat-grid-tile>
-  <mat-grid-tile
-      [colspan]="2"
-      [rowspan]="2"
-      [style.background]="'#e4e4e4'">
-    <app-data-table [users]="users"></app-data-table>
-  </mat-grid-tile>
-</mat-grid-list>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+      <app-pie-chart [geoLocation]="geoLocation"></app-pie-chart>
+    </div>
+    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+      <div class="per">
+        <app-percentage-box [percent]="percent"></app-percentage-box>
+      </div>
+      <div class="user">
+        <app-user-info [userInfo]="users ? users[0] : null"></app-user-info>
+      </div>
+    </div>
+    <div class="col-12">
+      <app-data-table [users]="users"></app-data-table>
+    </div>
+  </div>
+</div>
